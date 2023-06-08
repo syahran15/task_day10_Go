@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/addProjects.css" />
+    <title>Add Project</title>
+
+    <!-- Bo0tstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-dark-subtle">
+      <div class="container">
+        <a class="navbar-brand" href="home.html">
+          <img src="assets/images/dumbways.png" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-control="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle Navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-orange"
+                aria-current="page"
+                href="addProjects.html"
+                >Add Project</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="testimonial.html">Testimonial</a>
+            </li>
+          </ul>
+          <a href="contact.html" class="btn bg-orange text-white px-2">Contact Me</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Form Section Start -->
+    <section class="section-blog d-flex justify-content-center align-items-center mt-5 mb-5">
+      <div class="blog" style="width: 400px;">
+        <h1 class="mb-3 text-center">ADD MY PROJECT</h1>
+        <div class="blog-form">
+          <div class="form-container">
+            <form onsubmit="addBlog(event)">
+              <div class="project-name mb-3">
+                <label for="input-project-name" class="title"
+                  >Project Name</label
+                >
+                <input type="text" id="input-project-name" class="form-control" />
+              </div>
+              <div class="date-container d-flex justify-content-between">
+                <div class="start-date">
+                  <label for="input-start-date" class="title">Start Date</label>
+                  <input type="date" id="input-start-date" class="form-control" />
+                </div>
+                <div class="end-date">
+                  <label for="input-end-date" class="title">End Date</label>
+                  <input type="date" id="input-end-date" class="form-control" />
+                </div>
+              </div>
+              <div>
+                <label for="input-description" class="title">Description</label>
+                <textarea
+                  name=""
+                  id="input-description"
+                  cols="30"
+                  rows="10"
+                  class="form-control"
+                ></textarea>
+              </div>
+              <div class="checkbox">
+                <label for="" class="title">Technologies</label>
+                <div class="checkbox-container d-flex justify-content-between">
+                  <div class="checkbox-left">
+                    <div>
+                      <input type="checkbox" id="input-nodejs" />
+                      <label for="input-nodeJS">Node JS</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="input-reactJS" />
+                      <label for="input-reactJS">React JS</label>
+                    </div>
+                  </div>
+                  <div class="checkbox-right">
+                    <div>
+                      <input type="checkbox" id="input-nextJS" />
+                      <label for="input-nextJS">Next JS</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="input-typeScript" />
+                      <label for="input-typeScript">TypeScript</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label class="title" for="input-blog-image">Upload Image</label>
+                <div class="input-blog-image-group">
+                  <input type="file" id="input-blog-image " class="form-control" />
+                </div>
+              </div>
+              <div class="btn-group mt-3 justify-content-md-end">
+                <button class="btn btn-dark">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>  
+    <!-- Form Section End -->
+
+    <!-- Bootstrap CDN JavaScript-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- addProject.js -->
+    <script src="js/addProject.js"></script>
+  </body>
+</html>

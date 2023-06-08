@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.bg-orange {
+  background-color: orangered !important;
+}
+
+.bg-orange:hover {
+  background-color: #f57141 !important;
+}
+
+.text-orange {
+  color: orangered !important;
+}
+
+.container .navbar-brand img {
+  width: 40px;
+}
+
+.navbar-nav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  width: 60rem;
+}
+
+.social-media i {
+  font-size: 30px;
+  margin: 1em;
+  margin-left: 0;
+  color: black;
+}
+
+.social-media i:hover {
+  color: orangered;
+}
+
+.buttons i {
+  font-size: 20px;
+  margin: 0.5em;
+  margin-left: 0;
+  color: black;
+}
+
+.buttons i:hover {
+  color: orangered;
+}
+
+/* .card-content {
+  width: 300px;
+  box-shadow: 2px 2px 2px 2px #ddd;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 10px;
+} */
+
+.card-content .image-container {
+  width: 100%;
+
+}
+.card-content .image-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.logo-programming i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.logo-programming i:hover {
+ color: orangered; 
+}
+
+.btn-group-card {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-group-card button {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+#contents {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+#contents .card {
+  margin: 1rem;
+}
+/* Content Project */
+/* #result-blog {
+  background-color: #fff;
+}
+
+.section-content h1 {
+  padding-top: 50px;
+}
+
+#contents {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.card-content {
+  width: 300px;
+  box-shadow: 2px 2px 2px 2px #ddd;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card-content .image-container {
+  width: 100%;
+}
+.card-content .image-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-content .card-content-container .logo-container i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.card-content .card-content-container .btn-group-card {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card-content .card-content-container .btn-group-card .btn-edit {
+  flex: 1;
+}
+
+.card-content .card-content-container .btn-group-card .btn-delete {
+  flex: 1;
+}
+
+.card-content .card-content-container .btn-group-card button {
+  margin-right: 5px;
+  background-color: black;
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+.card-content .card-content-container .btn-group-card button:hover {
+  background-color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+} */
+
+@media only screen and (max-width: 900px) {
+  .collapse a,
+  .social-media,
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .right {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
