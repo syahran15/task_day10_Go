@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/addProjects.css" />
+    <link rel="stylesheet" href="public/css/home.css" />
+    <link rel="stylesheet" href="public/css/blog.css" />
     <title>Add Project</title>
 
     <!-- Bo0tstrap CDN -->
@@ -29,8 +29,8 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-dark-subtle">
       <div class="container">
-        <a class="navbar-brand" href="home.html">
-          <img src="assets/images/dumbways.png" />
+        <a class="navbar-brand" href="/">
+          <img src="public/images/dumbways.png" />
         </a>
         <button
           class="navbar-toggler"
@@ -46,47 +46,58 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="home.html">Home</a>
+              <a class="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link active text-orange"
-                aria-current="page"
-                href="addProjects.html"
-                >Add Project</a
+              <a class="nav-link" aria-current="page" href="testimonial"
+                >Testimonial</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="testimonial.html">Testimonial</a>
-            </li>
           </ul>
-          <a href="contact.html" class="btn bg-orange text-white px-2">Contact Me</a>
+          <a href="contact" class="btn bg-orange text-white px-2">Contact Me</a>
         </div>
       </div>
     </nav>
     <!-- Navbar End -->
 
     <!-- Form Section Start -->
-    <section class="section-blog d-flex justify-content-center align-items-center mt-5 mb-5">
-      <div class="blog" style="width: 400px;">
+    <section
+      class="section-blog d-flex justify-content-center align-items-center mt-5 mb-5"
+    >
+      <div class="blog" style="width: 600px">
         <h1 class="mb-3 text-center">ADD MY PROJECT</h1>
         <div class="blog-form">
           <div class="form-container">
-            <form onsubmit="addBlog(event)">
+            <form action="/addBlog" method="post">
               <div class="project-name mb-3">
                 <label for="input-project-name" class="title"
                   >Project Name</label
                 >
-                <input type="text" id="input-project-name" class="form-control" />
+                <input
+                  type="text"
+                  id="input-project-name"
+                  class="form-control"
+                  name="input-project-name"
+                />
               </div>
               <div class="date-container d-flex justify-content-between">
                 <div class="start-date">
                   <label for="input-start-date" class="title">Start Date</label>
-                  <input type="date" id="input-start-date" class="form-control" />
+                  <input
+                    type="date"
+                    id="input-start-date"
+                    class="form-control"
+                    name="input-start-date"
+                  />
                 </div>
                 <div class="end-date">
                   <label for="input-end-date" class="title">End Date</label>
-                  <input type="date" id="input-end-date" class="form-control" />
+                  <input
+                    type="date"
+                    id="input-end-date"
+                    class="form-control"
+                    name="input-end-date"
+                  />
                 </div>
               </div>
               <div>
@@ -97,6 +108,7 @@
                   cols="30"
                   rows="10"
                   class="form-control"
+                  name="input-description"
                 ></textarea>
               </div>
               <div class="checkbox">
@@ -127,17 +139,21 @@
               <div>
                 <label class="title" for="input-blog-image">Upload Image</label>
                 <div class="input-blog-image-group">
-                  <input type="file" id="input-blog-image " class="form-control" />
+                  <input
+                    type="file"
+                    id="input-blog-image"
+                    class="form-control"
+                  />
                 </div>
               </div>
               <div class="btn-group mt-3 justify-content-md-end">
-                <button class="btn btn-dark">Submit</button>
+                <button type="submit" class="btn btn-dark">Submit</button>
               </div>
             </form>
           </div>
         </div>
       </div>
-    </section>  
+    </section>
     <!-- Form Section End -->
 
     <!-- Bootstrap CDN JavaScript-->
@@ -148,6 +164,6 @@
     ></script>
 
     <!-- addProject.js -->
-    <script src="js/addProject.js"></script>
+    <script src="public/js/blog.js"></script>
   </body>
 </html>

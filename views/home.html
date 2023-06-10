@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="public/css/home.css" />
 
     <!-- Bo0tstrap CDN -->
     <link
@@ -22,6 +22,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Adding Styling  -->
+    <style>
+      .addBlog:hover {
+        background-color: orangered;
+      }
+
+    </style>
 
     <title>Home</title>
   </head>
@@ -29,8 +36,8 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-dark-subtle">
       <div class="container">
-        <a class="navbar-brand" href="home.html">
-          <img src="assets/images/dumbways.png" />
+        <a class="navbar-brand" href="/">
+          <img src="public/images/dumbways.png" />
         </a>
         <button
           class="navbar-toggler"
@@ -49,18 +56,15 @@
               <a
                 class="nav-link active text-orange"
                 aria-current="page"
-                href="home.html"
+                href="/"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="addProjects.html">Add Project</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="testimonial.html">Testimonial</a>
+              <a class="nav-link" aria-current="page" href="testimonial">Testimonial</a>
             </li>
           </ul>
-          <a href="contact.html" class="btn bg-orange text-white px-2">Contact Me</a>
+          <a href="contact" class="btn bg-orange text-white px-2">Contact Me</a>
         </div>
       </div>
     </nav>
@@ -109,7 +113,7 @@
           <div class="right col-sm-4">
             <div class="card" style="width: 18rem">
               <img
-                src="assets/images/profile3.jpg"
+                src="public/images/profile3.jpg"
                 class="card-img-top"
                 alt="..."
               />
@@ -127,123 +131,23 @@
     <!-- Project Start -->
     <section id="result-blog" class="d-flex justify-content-center align-items-center mt-5 mb-2">
       <div class="section-content">
-        <h1 class="text-center">MY PROJECTS</h1>
+        <div class="d-flex justify-content-center align-items-center">
+          <h1 class="text-center me-3">MY PROJECTS</h1>
+          {{if .Login}}
+          <div class="addBlog bg-body-secondary" style="padding: 0.8rem; border-radius: 100%;">
+            <a href="addBlog"><i class="fa-solid fa-plus" style="color: black; font-size: 1.8rem; "></i></a>
+          </div>
+          {{end}}
+        </div>
         <div id="contents">
           <div class="card" style="width: 25rem; padding: 1rem;">
-            <img src="assets/images/profile3.jpg" class="card-img-top" alt="img-project">
+            <img src="public/images/profile3.jpg" class="card-img-top" alt="img-project">
             <div class="card-body">
-              <h5 class="card-title">Dumbways Mobile App -202</h5>
-                <p class="card-duration">Durasi : 3 bulan</p>
+              <h5 class="card-title"><a href="detail-blog" class="text-dark" style="text-decoration: none;">Dumways.ID</a></h5>
+                <p class="card-duration">Durasi : 1 Bulan 10 Hari</p>
                 <br />
                 <p class="card-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex at
-                  voluptate rem asperiores earum. Nemo harum delectus natus
-                  aspernatur velit maxime in veniam vero, facere voluptate
-                  reprehenderit? Consectetur, quae eos.
-                </p>
-                <div class="logo-programming">
-                  <i class="fa-brands fa-android"></i>
-                  <i class="fa-brands fa-java"></i>
-                  <i class="fa-brands fa-square-js"></i>
-                </div>
-                <div class="btn-group-card">
-                  <button class="btn btn-dark" type="button">Edit</button>
-                  <button class="btn btn-dark" type="button">Delete</button>
-                </div>
-                <!-- <div style="float: right; margin: 10px">
-                  <p style="font-size: 15px; color: grey"></p>
-                </div> -->
-            </div>
-          </div>
-          <div class="card" style="width: 25rem; padding: 1rem;">
-            <img src="assets/images/profile3.jpg" class="card-img-top" alt="img-project">
-            <div class="card-body">
-              <h5 class="card-title">Dumbways Mobile App -202</h5>
-                <p class="card-duration">Durasi : 3 bulan</p>
-                <br />
-                <p class="card-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex at
-                  voluptate rem asperiores earum. Nemo harum delectus natus
-                  aspernatur velit maxime in veniam vero, facere voluptate
-                  reprehenderit? Consectetur, quae eos.
-                </p>
-                <div class="logo-programming">
-                  <i class="fa-brands fa-android"></i>
-                  <i class="fa-brands fa-java"></i>
-                  <i class="fa-brands fa-square-js"></i>
-                </div>
-                <div class="btn-group-card">
-                  <button class="btn btn-dark" type="button">Edit</button>
-                  <button class="btn btn-dark" type="button">Delete</button>
-                </div>
-                <!-- <div style="float: right; margin: 10px">
-                  <p style="font-size: 15px; color: grey"></p>
-                </div> -->
-            </div>
-          </div>
-          <div class="card" style="width: 25rem; padding: 1rem;">
-            <img src="assets/images/profile3.jpg" class="card-img-top" alt="img-project">
-            <div class="card-body">
-              <h5 class="card-title">Dumbways Mobile App -202</h5>
-                <p class="card-duration">Durasi : 3 bulan</p>
-                <br />
-                <p class="card-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex at
-                  voluptate rem asperiores earum. Nemo harum delectus natus
-                  aspernatur velit maxime in veniam vero, facere voluptate
-                  reprehenderit? Consectetur, quae eos.
-                </p>
-                <div class="logo-programming">
-                  <i class="fa-brands fa-android"></i>
-                  <i class="fa-brands fa-java"></i>
-                  <i class="fa-brands fa-square-js"></i>
-                </div>
-                <div class="btn-group-card">
-                  <button class="btn btn-dark" type="button">Edit</button>
-                  <button class="btn btn-dark" type="button">Delete</button>
-                </div>
-                <!-- <div style="float: right; margin: 10px">
-                  <p style="font-size: 15px; color: grey"></p>
-                </div> -->
-            </div>
-          </div>
-          <div class="card" style="width: 25rem; padding: 1rem;">
-            <img src="assets/images/profile3.jpg" class="card-img-top" alt="img-project">
-            <div class="card-body">
-              <h5 class="card-title">Dumbways Mobile App -202</h5>
-                <p class="card-duration">Durasi : 3 bulan</p>
-                <br />
-                <p class="card-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex at
-                  voluptate rem asperiores earum. Nemo harum delectus natus
-                  aspernatur velit maxime in veniam vero, facere voluptate
-                  reprehenderit? Consectetur, quae eos.
-                </p>
-                <div class="logo-programming">
-                  <i class="fa-brands fa-android"></i>
-                  <i class="fa-brands fa-java"></i>
-                  <i class="fa-brands fa-square-js"></i>
-                </div>
-                <div class="btn-group-card">
-                  <button class="btn btn-dark" type="button">Edit</button>
-                  <button class="btn btn-dark" type="button">Delete</button>
-                </div>
-                <!-- <div style="float: right; margin: 10px">
-                  <p style="font-size: 15px; color: grey"></p>
-                </div> -->
-            </div>
-          </div>
-          <div class="card" style="width: 25rem; padding: 1rem;">
-            <img src="assets/images/profile3.jpg" class="card-img-top" alt="img-project">
-            <div class="card-body">
-              <h5 class="card-title">Dumbways Mobile App -202</h5>
-                <p class="card-duration">Durasi : 3 bulan</p>
-                <br />
-                <p class="card-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex at
-                  voluptate rem asperiores earum. Nemo harum delectus natus
-                  aspernatur velit maxime in veniam vero, facere voluptate
-                  reprehenderit? Consectetur, quae eos.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti non dolorem expedita, illo ullam beatae, laborum eaque quas delectus amet aperiam reiciendis laudantium odit excepturi, autem animi! Quidem, voluptatem at.
                 </p>
                 <div class="logo-programming">
                   <i class="fa-brands fa-android"></i>
@@ -269,5 +173,10 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- JavaScript Start -->
+
+    
+    <!-- JavaScript End -->
   </body>
 </html>

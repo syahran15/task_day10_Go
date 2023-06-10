@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="public/css/home.css" />
+    <link rel="stylesheet" href="public/css/contact.css" />
 
     <!-- Bootstrap CDN -->
     <link
@@ -29,8 +29,8 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-dark-subtle">
       <div class="container">
-        <a class="navbar-brand" href="home.html">
-          <img src="assets/images/dumbways.png" />
+        <a class="navbar-brand" href="/">
+          <img src="public/images/dumbways.png" />
         </a>
         <button
           class="navbar-toggler"
@@ -46,18 +46,15 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="home.html">Home</a>
+              <a class="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="addProjects.html"
-                >Add Project</a
+              <a class="nav-link" aria-current="page" href="testimonial"
+                >Testimonial</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="testimonial.html">Testimonial</a>
-            </li>
           </ul>
-          <a href="contact.html" class="btn bg-orange text-white px-2 active"
+          <a href="contact" class="btn bg-orange text-white px-2 active"
             >Contact Me</a
           >
         </div>
@@ -66,23 +63,25 @@
     <!-- Navbar End -->
 
     <!-- Contact Form Start -->
-    <div class="container d-flex justify-content-center align-items-center mb-5">
+    <div
+      class="container d-flex justify-content-center align-items-center mb-5"
+    >
       <form>
         <div>
           <label for="input-name">Name</label>
-          <input id="input-name" type="text" class="form-control" required />
+          <input id="input-name" name="input-name" type="text" class="form-control" required />
         </div>
         <div>
           <label for="input-email">Email</label>
-          <input id="input-email" type="email" class="form-control" required />
+          <input id="input-email" name="input-email" type="email" class="form-control" required />
         </div>
         <div>
           <label for="input-phone">Handphone</label>
-          <input id="input-phone" type="number" class="form-control" required />
+          <input id="input-phone" name="input-phone" type="number" class="form-control" required />
         </div>
         <div>
           <label for="input-subject">Subject</label>
-          <select name="subject" id="input-subject" class="form-control">
+          <select name="subject" id="input-subject" name="input-subject" class="form-control">
             <option value="" hidden>Select</option>
             <option>Frontend</option>
             <option>Backend</option>
@@ -97,10 +96,17 @@
             cols="30"
             rows="10"
             class="form-control"
+            name="input-message"
           ></textarea>
         </div>
         <div>
-          <button class="btn btn-dark mt-2" type="button" onclick="submitData()">SUBMIT</button>
+          <button
+            class="btn btn-dark mt-2"
+            type="submit"
+            onclick="submitData()"
+          >
+            SUBMIT
+          </button>
         </div>
       </form>
     </div>
@@ -114,6 +120,6 @@
     ></script>
 
     <!-- contact.js -->
-    <script src="js/contact.js"></script>
+    <script src="public/js/contact.js"></script>
   </body>
 </html>

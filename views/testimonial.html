@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/testimonial.css" />
+    <link rel="stylesheet" href="public/css/home.css" />
+    <link rel="stylesheet" href="public/css/testimonial.css" />
 
     <!-- Bo0tstrap CDN -->
     <link
@@ -15,7 +15,7 @@
       crossorigin="anonymous"
     />
 
-    <!-- Font awesome -->   
+    <!-- Font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -29,8 +29,8 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-dark-subtle">
       <div class="container">
-        <a class="navbar-brand" href="home.html">
-          <img src="assets/images/dumbways.png" />
+        <a class="navbar-brand" href="/">
+          <img src="public/images/dumbways.png" />
         </a>
         <button
           class="navbar-toggler"
@@ -46,25 +46,18 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="home.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="addProjects.html"
-                >Add Project</a
-              >
+              <a class="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a
                 class="nav-link active text-orange"
                 aria-current="page"
-                href="testimonial.html"
+                href="testimonial"
                 >Testimonial</a
               >
             </li>
           </ul>
-          <a href="contact.html" class="btn bg-orange text-white px-2"
-            >Contact Me</a
-          >
+          <a href="contact" class="btn bg-orange text-white px-2">Contact Me</a>
         </div>
       </div>
     </nav>
@@ -72,11 +65,13 @@
 
     <!-- Content Start -->
     <section>
-      <div class = "content-container mt-5">
+      <div class="content-container mt-5">
         <h1 class="text-center">My Testimonials</h1>
         <div>
           <h2>Rating By Stars</h2>
-          <div class="container-rating-btn d-flex justify-content-center align-items-center">
+          <div
+            class="container-rating-btn d-flex justify-content-center align-items-center"
+          >
             <button class="rating-btn" onclick="getAllTestimonials()">
               All
             </button>
@@ -149,7 +144,7 @@
     ></script>
 
     <!-- testimonial.js -->
-    <script src="js/index.js"></script>
-    <script src="js/ajax.js"></script>
+    <script src="public/js/index.js"></script>
+    <script src="public/js/ajax.js"></script>
   </body>
 </html>
